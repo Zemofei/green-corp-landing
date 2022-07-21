@@ -1,3 +1,4 @@
+/*Проект в СберУнивер*/
 body {
     font-family: 'Raleway', sans-serif;
     color: #213053;
@@ -8,7 +9,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
- }
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 .header__logo {
     height: 30px;
  }
@@ -35,10 +40,12 @@ button {
 .about__image {
     width: 500px;
  }
-   
+
 .about__sun-image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s infinite linear;
+    position: absolute;
  }
 .about {
     display: flex;
@@ -77,9 +84,9 @@ button {
     padding-top: 115px;
     padding-bottom: 115px;
     text-align: center;
-    display: flex;  
+    display: flex;
     justify-content: center;
-    align-items: center;
+
  }
 .form h1{
     font-size: 48px;
@@ -92,7 +99,7 @@ button {
     display: flex;
     flex-direction: column;
     text-align: left;
-    justify-content: space-evenly;
+
 }
 .form form {
     display: grid;
@@ -136,7 +143,7 @@ footer {
 }
 .footer__container {
     display: flex;
-    justify-content: center;  
+    justify-content: center;
 }
 .footer__copyright{
     margin-top: 40px;
@@ -158,4 +165,13 @@ footer {
 }
 .footer__links a {
     margin-bottom: 15px;
+}
+@keyframes rotation {
+    0%{
+        transform: rotate(0);
+      }
+
+      100%{
+        transform: rotate(360deg);
+      }
 }
